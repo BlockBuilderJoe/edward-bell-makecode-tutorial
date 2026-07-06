@@ -9,6 +9,7 @@
   "files": [
     "main.ts",
     "README.md",
+    "practice-bell.md",
     "edward-bell.md"
   ],
   "targetVersions": {
