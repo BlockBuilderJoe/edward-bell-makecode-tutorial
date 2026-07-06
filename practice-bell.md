@@ -11,7 +11,7 @@
 ```template
 player.onChat("ring1", function () {
     agent.move(FORWARD, 1)
-    pause(1000)
+    loops.pause(1000)
 })
 ```
 
@@ -30,7 +30,7 @@ Place ``||agent:agent move back||`` after the pause.
 ```blocks
 player.onChat("ring1", function () {
     agent.move(FORWARD, 1)
-    pause(1000)
+    loops.pause(1000)
     agent.move(BACK, 1)
 })
 ```
@@ -44,5 +44,5 @@ player.onChat("ring1", function () {
 })
 agent.move(FORWARD, 1)
 agent.move(BACK, 1)
-pause(1000)
+loops.pause(1000)
 ```

@@ -11,15 +11,15 @@
 ```template
 player.onChat("sos", function () {
     agent.move(FORWARD, 1)
-    pause(1000)
+    loops.pause(1000)
     agent.move(BACK, 1)
-    pause(1000)
+    loops.pause(1000)
     agent.move(FORWARD, 1)
-    pause(1000)
+    loops.pause(1000)
     agent.move(BACK, 1)
-    pause(1000)
+    loops.pause(1000)
     agent.move(FORWARD, 1)
-    pause(1000)
+    loops.pause(1000)
 })
 ```
 
@@ -38,17 +38,17 @@ Add one more ``||agent:agent move back||`` and a ``||loops:pause||`` after the f
 ```blocks
 player.onChat("sos", function () {
     agent.move(FORWARD, 1)
-    pause(1000)
+    loops.pause(1000)
     agent.move(BACK, 1)
-    pause(1000)
+    loops.pause(1000)
     agent.move(FORWARD, 1)
-    pause(1000)
+    loops.pause(1000)
     agent.move(BACK, 1)
-    pause(1000)
+    loops.pause(1000)
     agent.move(FORWARD, 1)
-    pause(1000)
+    loops.pause(1000)
     agent.move(BACK, 1)
-    pause(1000)
+    loops.pause(1000)
 })
 ```
 
@@ -63,9 +63,9 @@ Add two ``||agent:agent turn left||`` blocks after the first S pattern.
 ```blocks
 player.onChat("sos", function () {
     agent.move(FORWARD, 1)
-    pause(1000)
+    loops.pause(1000)
     agent.move(BACK, 1)
-    pause(1000)
+    loops.pause(1000)
     agent.turn(LEFT_TURN)
     agent.turn(LEFT_TURN)
 })
@@ -84,17 +84,17 @@ player.onChat("sos", function () {
     agent.turn(LEFT_TURN)
     agent.turn(LEFT_TURN)
     agent.move(FORWARD, 1)
-    pause(1000)
+    loops.pause(1000)
     agent.move(BACK, 1)
-    pause(1000)
+    loops.pause(1000)
     agent.move(FORWARD, 1)
-    pause(1000)
+    loops.pause(1000)
     agent.move(BACK, 1)
-    pause(1000)
+    loops.pause(1000)
     agent.move(FORWARD, 1)
-    pause(1000)
+    loops.pause(1000)
     agent.move(BACK, 1)
-    pause(1000)
+    loops.pause(1000)
 })
 ```
 
@@ -111,9 +111,9 @@ player.onChat("sos", function () {
     agent.turn(LEFT_TURN)
     agent.turn(LEFT_TURN)
     agent.move(FORWARD, 1)
-    pause(1000)
+    loops.pause(1000)
     agent.move(BACK, 1)
-    pause(1000)
+    loops.pause(1000)
 })
 ```
 
@@ -129,9 +129,9 @@ This extension keeps the same behaviour but makes the main program easier to rea
 function formLetter () {
     for (let index = 0; index < 3; index++) {
         agent.move(FORWARD, 1)
-        pause(1000)
+        loops.pause(1000)
         agent.move(BACK, 1)
-        pause(1000)
+        loops.pause(1000)
     }
     agent.turn(LEFT_TURN)
     agent.turn(LEFT_TURN)
@@ -153,5 +153,5 @@ player.onChat("sos", function () {
 agent.move(FORWARD, 1)
 agent.move(BACK, 1)
 agent.turn(LEFT_TURN)
-pause(1000)
+loops.pause(1000)
 ```
