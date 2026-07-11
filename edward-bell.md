@@ -1,5 +1,3 @@
-### @codeStart function bell/start_test
-### @codeStop scoreboard players set @s makecode 1
 ### @hideIteration true
 ### @hideDone true
 ### @flyoutOnly 1
