@@ -13,7 +13,8 @@
     "practice-bell-v2.md",
     "edward-bell.md",
     "edward-bell-v2.md",
-    "long-text-example.md"
+    "long-text-example.md",
+    "long-text-example-v2.md"
   ],
   "targetVersions": {
     "target": "1.6.27",
