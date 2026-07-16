@@ -11,8 +11,10 @@ how much guided text a learner can read inside the Minecraft Education Code
 Builder window. The words are placeholder text, not lesson content.
 
 ```template
-player.say("Starter program ready")
-loops.pause(1000)
+player.onChat("longtext", function () {
+    agent.move(FORWARD, 1)
+    loops.pause(1000)
+})
 ```
 
 ## Mission brief @showdialog
@@ -48,7 +50,7 @@ and then press the green Play button once.
 
 #### ~ tutorialhint
 
-The starter only says one message and waits. If the window is crowded, scroll
+The starter moves the Agent once and waits. If the window is crowded, scroll
 inside the tutorial pane rather than closing Code Builder.
 
 ## Step 2: Add one small action
@@ -59,20 +61,22 @@ ac ipsum id lectus ultricies feugiat. Donec a mi eu ipsum posuere consequat.
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
 turpis egestas.
 
-Add one more action after the pause. Keep the order exactly as shown: message,
-pause, then message. This is a small change so the learner can compare the
+Add one more action after the pause. Keep the order exactly as shown: move,
+pause, then move back. This is a small change so the learner can compare the
 prediction with the result without being overwhelmed by a large program.
 
 ```blocks
-player.say("Starter program ready")
-loops.pause(1000)
-player.say("Second message")
+player.onChat("longtext", function () {
+    agent.move(FORWARD, 1)
+    loops.pause(1000)
+    agent.move(BACK, 1)
+})
 ```
 
 #### ~ tutorialhint
 
-Drag a `||player:player say||` block below the pause. Type the short message
-shown in the example. Do not delete the starter blocks.
+Drag a `||agent:agent move back||` block below the pause. Do not delete the
+starter blocks.
 
 ## Step 3: Observe the window
 
@@ -102,8 +106,11 @@ idea is that a long explanation should still contain a clear action, an
 expected result, and a simple recovery path.
 
 ```blocks
-// @highlight
-player.say("Second message")
+player.onChat("longtext", function () {
+    agent.move(FORWARD, 1)
+    loops.pause(1000)
+    agent.move(BACK, 1)
+})
 ```
 
 ## Step 5: A longer explanation
@@ -138,15 +145,17 @@ vitae massa aliquet sodales. Nam scelerisque lacus non augue posuere, quis
 commodo mauris pellentesque. Sed vitae nisl a augue gravida hendrerit. Nulla
 facilisi. Donec finibus dolor id leo ultrices, quis interdum velit fermentum.
 
-Try changing the second message to your own short sentence. Keep the first
-message unchanged so the learner can see which part of the program they edited.
+Try changing the second movement to your own safe Agent action. Keep the first
+movement unchanged so the learner can see which part of the program they edited.
 The final program is intentionally harmless and does not place, remove, or
 spawn anything in the world.
 
-```typescript
-player.say("Starter program ready")
-loops.pause(1000)
-player.say("My own message")
+```blocks
+player.onChat("longtext", function () {
+    agent.move(FORWARD, 1)
+    loops.pause(1000)
+    agent.move(BACK, 1)
+})
 ```
 
 ## Step 7: Final reflection
@@ -170,5 +179,9 @@ with reviewed learner-facing content, keep each step purposeful, and provide a
 Welsh file with the same structure when localisation is required.
 
 ```blocks
-player.say("Long text test complete")
+player.onChat("longtext", function () {
+    agent.move(FORWARD, 1)
+    loops.pause(1000)
+    agent.move(BACK, 1)
+})
 ```
